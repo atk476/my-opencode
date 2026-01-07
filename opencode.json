@@ -16,23 +16,11 @@
         "gemini-3-flash-preview",
         "gemini-3-pro-preview",
       ],
-      "models": {
-        "gemini-3-flash-preview": {
-          "name": "Gemini 3 Flash",
-          "options": {
-            "includeThoughts": true,
-          },
-        },
-        "gemini-3-pro-preview": {
-          "name": "Gemini 3 Pro",
-          "options": {
-            "includeThoughts": true,
-          },
-        },
-      },
     },
     "openai": {
-      "whitelist": ["gpt-5.2-codex"],
+      "whitelist": [
+        "gpt-5.2-codex",
+      ],
       "models": {
         "gpt-5.2-codex": {
           "name": "GPT 5.2 Codex",
@@ -81,8 +69,48 @@
       "whitelist": [
         "anthropic/claude-opus-4.5",
         "anthropic/claude-sonnet-4.5",
-        "anthropic/claude-haiku-4.5",
+        "x-ai/grok-4.1-fast",
       ],
+      "models": {
+        "anthropic/claude-opus-4.5": {
+          "options": {
+            "reasoning": {
+              "effort": null,
+              "max_tokens": 16000,
+            },
+          },
+          "variants": {
+            "max": {
+              "reasoning": {
+                "effort": null,
+                "max_tokens": 31999,
+              },
+            },
+            "high": { "disabled": true },
+            "medium": { "disabled": true },
+            "low": { "disabled": true },
+          },
+        },
+        "anthropic/claude-sonnet-4.5": {
+          "options": {
+            "reasoning": {
+              "effort": null,
+              "max_tokens": 16000,
+            },
+          },
+          "variants": {
+            "max": {
+              "reasoning": {
+                "effort": null,
+                "max_tokens": 31999,
+              },
+            },
+            "high": { "disabled": true },
+            "medium": { "disabled": true },
+            "low": { "disabled": true },
+          },
+        },
+      },
     },
   },
   "mcp": {
